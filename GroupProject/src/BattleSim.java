@@ -91,6 +91,19 @@ public class BattleSim
             System.out.println("--------------------------------");
         }
 
+        if (player1.getHealth() <= 0 && player2.getHealth() <= 0)
+        {
+            System.out.println("It's a draw!");
+        }
+        else if (player1.getHealth() <= 0)
+        {
+            System.out.println(player2.getName() + " wins!");
+        }
+        else
+        {
+            System.out.println(player1.getName() + " wins!");
+        }
+
        
     }
 }
