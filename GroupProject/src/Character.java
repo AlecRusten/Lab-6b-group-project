@@ -2,34 +2,44 @@ public class Character{
     private String Name;
     private int Health;
     private int Strength;
-    private int Speed;
-    private int CritChance = 10;
-
-    private static final int IN_HP = 100;
-    private static final int IN_ATK = 5;
-    private static final int IN_HEAL = 4;
+    private int RegenSpeed;
+    private int CritChance;
     
-    public Character(String name, int health, int regenspeed)
+    public Character(String name, int health, int regenspeed, int strength, int critchance)
         {
             Name = name;
+            Strength = strength;
             Health = health;
-            Speed = regenspeed;
+            RegenSpeed = regenspeed;
+            CritChance = critchance;
         }
 
-        public String getName() {
-            return Name;
+    public Character()
+        {
+            Name = "Adventurer";
+            Health = 100;
+            Strength = 5;
+            RegenSpeed = 4;
+            CritChance = 10;
         }
 
-        public int getHealth() {
-            return Health;
-        }
+    public String toString() {
+        return ("Name: "+Name+" | Health: "+Health+" | Strength: "+Strength+" | Regen Speed: "+RegenSpeed+" | Crit Chance: "+CritChance);
+    }
 
-        public int getSpeed() {
-            return Speed;
-        }
+    public String getName() {
+        return Name;
+    }
 
-        public int getCrit() {
-            return CritChance;
-        }
-        
+    public int getHealth() {
+        return Health;
+    }
+
+    public int getRegenSpeed() {
+        return RegenSpeed;
+    }
+
+    public int getCrit() {
+        return CritChance;
+    }
 }
